@@ -1,0 +1,17 @@
+<div class="container">
+  <h1 class="my-4">Últimos Artículos</h1>
+
+  <div *ngFor="let post of posts" class="card mb-4">
+
+    <img [src]="post.imageUrl" class="card-img-top" [alt]="post.title">
+
+    <div class="card-body">
+      <h2 class="card-title">{{ post.title }}</h2>
+      <p class="card-text">{{ post.content }}</p>
+      <a href="#" class="btn btn-primary">Leer Más &rarr;</a>
+    </div>
+    <div class="card-footer text-muted">
+      Publicado el {{ post.publishDate | date: 'longDate' }} por {{ post.author }}
+    </div>
+  </div>
+  </div>
